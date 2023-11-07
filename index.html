@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./my-jquery.js"></script>
+  <script src="./my-popper.js"></script>
+  <script src="./my-bootstrap.js"></script>
+  <script src="./my-custom.js"></script>
+  <link rel="stylesheet" href="./my-custom-bootstrap.css" />
+  <link rel="stylesheet" href="./my-custom-styles.css" />
+</head>
+<body class="my-container">
+  <h1>My Recipes API Client</h1>
+
+  <button type="button" class="my-btn my-primary my-lg" data-toggle="modal" data-target="#my-add-modal">Add My Recipe</button>
+
+  <div class="my-modal fade" id="my-add-modal" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+    <div class="my-modal-dialog" role="document">
+      <div class="my-modal-content">
+        <div class="my-modal-header">
+          <h5 class="my-modal-title">Add New My Recipe</h5>
+          <button type="button" class="my-close" data-dismiss="my-modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="my-modal-body">
+          <div class="my-form-group">
+            <label for="my-title">My Title</label>
+            <input type="text" class="my-form-control" name="my-title" id="my-title" aria-describedby="my-title-help" placeholder="My Title of the My Recipe" />
+            <small id="my-title-help" class="my-form-text my-muted">Enter My Title of the My Recipe</small>
+          </div>
+          <div class="my-form-group">
+            <label for="my-body">My Body</label>
+            <input type="text" class="my-form-control" name="my-body" id="my-body" aria-describedby="my-body-help" placeholder="My Recipe Details" />
+            <small id="my-body-help" class="my-form-text my-muted">Enter My Details</small>
+          </div>
+        </div>
+        <div class="my-modal-footer">
+          <button id="my-add-btn" class="my-btn my-info">Add My Recipe</button>
+          <button type="button" class="my-btn my-secondary" data-dismiss="my-modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="my-recipes">Loading ...</div>
+
+  <div class="my-modal fade" id="my-update-modal" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+    <div class="my-modal-dialog" role="document">
+      <div class="my-modal-content">
+        <div class="my-modal-header">
+          <h5 class="my-modal-title">Update My Record</h5>
+          <button type="button" class="my-close" data-dismiss="my-modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="my-modal-body">
+          <input type="hidden" id="my-update-id" /><br />
+          <div class="my-form-group">
+            <label for="my-update-title">My Title</label>
+            <input type="text" class="my-form-control" name="my-update-title" id="my-update-title" aria-describedby="my-update-help" placeholder="" />
+            <small id="my-update-help" class="my-form-text my-muted">Enter My Title to Update</small>
+          </div>
+          <div class="my-form-group">
+            <label for="my-update-body">My Body</label>
+            <textarea class="my-form-control" name="my-update-body" id="my-update-body" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="my-modal-footer">
+          <button id="my-update-save" class="my-btn my-primary">Update</button>
+          <button type="button" class="my-btn my-secondary" data-dismiss="my-modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
